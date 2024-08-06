@@ -81,3 +81,19 @@ elif config["settings"]["trimming-tool"] == "none":
 # Another ugly workaround for https://github.com/snakemake/snakefmt/issues/239
 if not trimming_tool_good:
     raise Exception("Unknown trimming-tool: " + config["settings"]["trimming-tool"])
+
+# # Find all the trimmed reads
+# def get_trimming_result(sample):
+
+
+# # This alternative target rule executes all steps up to the trimming of fastq files.
+# # This is the same as the above all_bams rule, but additionally also requests the pileups.
+# rule all_trims:
+#     input:
+#         unpack(get_fastq),
+
+# # The `all_trims` rule is local. It does not do anything anyway,
+# # except requesting the other rules to run.
+# localrules:
+#     all_trims,
+

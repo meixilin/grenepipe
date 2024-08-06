@@ -105,7 +105,7 @@ rule mpileup_all_merged_samples:
 # =================================================================================================
 
 
-# This alternative target rule executes all steps up to th mapping and mpileup creation.
+# This alternative target rule executes all steps up to the mapping and mpileup creation.
 # This is the same as the above all_bams rule, but additionally also requests the pileups.
 rule all_pileups:
     input:
